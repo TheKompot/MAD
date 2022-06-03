@@ -1,0 +1,17 @@
+Navrh projektu MAD
+Meno studenta: Rudolf Nosek
+Odbor: 2DAV
+
+* Data: Scitanie vevericiek v New Yorku
+	* 3023 riadkov (spatrenych vevericiek), 37 stlpcov (atributov) 
+* Zdroj dat: https://github.com/rfordatascience/tidytuesday/tree/master/data/2019/2019-10-29
+
+* Ciel:
+	* EDA ( statisticke ukazovatele, ich vizualizacia, vizualizacia distribucie jednotlivych premmennych, skumanie zavislosti atd.)
+	* Z analyzovat casovy rad vyskytov vevericiek, zistit trend, popripade sezionalitu a predikovat pokracovanie radu
+ 	* Pozriet sa na to ako sa menili ostatne premenne v case
+	* Vytvorit klasifikator ktory pomocou informacii o vevericke bude vediet predikovat nejaky nezadany atribut vevericky 
+	* Nakreslit heat mapu kde boli vevericky spatrene
+	* Vytvorit stranku na ktorej budu vsetky vyssie body umiestnene
+
+* Technologie: python, flask, javascript, html, css, sklearn, pandas, numpy, plotly/dash, SQL
