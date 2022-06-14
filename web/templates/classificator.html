@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Classification</title>
+{% endblock %}
+
+{% block body %}
+
+<form action="/result" method="GET">
+    <p>Robila vevericka aktivitu ? 
+        <input type="radio" id="did_activity_true" name="did_activity" value="1">
+        <label for="did_activity_true">ano</label>
+        <input type="radio" id="did_activity_false" name="did_activity" value="0">
+        <label for="did_activity_false">nie</label></p> 
+
+    <p>Mali ste s veverickou nejaku interakciu ? 
+        <input type="radio" id="did_interaction_true" name="did_interaction" value="1">
+        <label for="did_interaction_true">ano</label>
+        <input type="radio" id="did_interaction_false" name="did_interaction" value="0">
+        <label for="did_interaction_false">nie</label></p> 
+
+    <p>Spatrili ste ju pred obedom ? 
+        <input type="radio" id="is_AM_true" name="is_AM" value="1">
+        <label for="is_AM_true">ano</label>
+        <input type="radio" id="is_AM_false" name="is_AM" value="0">
+        <label for="is_AM_false">nie</label></p> 
+    
+    <p>Bola dospela ? 
+        <input type="radio" id="is_adult_true" name="is_adult" value="1">
+        <label for="is_adult_true">ano</label>
+        <input type="radio" id="is_adult_false" name="is_adult" value="0">
+        <label for="is_adult_false">nie</label></p> 
+    
+    <p>Bola na zemi ? 
+        <input type="radio" id="on_ground_true" name="on_ground" value="1">
+        <label for="on_ground_true">ano</label>
+        <input type="radio" id="on_ground_false" name="on_ground" value="0">
+        <label for="on_ground_false">nie</label></p> 
+
+    <input type="submit" id = "passw" value="Submit">
+</form> 
+
+{% endblock %}

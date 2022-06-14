@@ -5,5 +5,24 @@
 {% endblock %}
 
 {% block body %}
-<p>Hello wordl</p>
+
+<p>Zaujimave grafy o veverickach z New Yorku</p>
+
+<strong>Mapa spatreni vevericiek</strong><br>
+<img src="{{ url_for('static',filename = 'pictures/map_with_squirrels.png')  }}" width="500" height="600"><br><br>
+
+<strong>Rozdelenie vybranych atributov</strong><br>
+<img src="{{ url_for('static',filename = 'pictures/variable_distributions.png')  }}" width="500" height="800"><br><br>
+
+<strong>Pocty spatreni v case</strong><br>
+<img src="{{ url_for('static',filename = 'pictures/timeseries.png')  }}" width="600" height="300"><br><br>
+
+<strong>Rozne predikcie do buducnosti</strong><br>
+<img src="{{ url_for('static',filename = 'pictures/ts_with_predictions.png')  }}" width="500" height="600"><br><br>
+
+<strong>Priemerna zmena roznych atributov</strong><br>
+<img src="{{ url_for('static',filename = 'pictures/variable_ts.png')  }}" width="800" height="700"><br><br>
+
+<strong>korelacna matica</strong><br>
+<img src="{{ url_for('static',filename = 'pictures/corr_matrix.png')  }}" width="600" height="600"><br><br>
 {% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Result</title>
+{% endblock %}
+
+{% block body %}
+<br><br>
+<p>Vasa vevericka mala:</p>
+{% for key, value in data.items() %}
+   {% if key == 0 %}
+      <strong>Ciernu farbu na</strong>
+   {% endif %}
+   {% if key == 1 %}
+      <strong>Sedu farbu na</strong>
+   {% endif %}
+   {% if key == 2 %}
+      <strong>Skoricovu farbu na</strong>
+   {% endif %}
+
+   <strong>{{value*100}} %</strong>
+   <br>
+{% endfor %}
+
+{% endblock %}

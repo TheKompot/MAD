@@ -2,20 +2,32 @@
 <html>
 
 <head>
-        <meta charset="utf-8">
-        {% block head %} {% endblock %}
+	<meta charset="utf-8">
+
+	{% block head %} {% endblock %} 
+
+	<link href="{{ url_for('static',filename = 'css/main.css')  }}" rel="stylesheet">
 </head>
 
 <body>
-        <header>
-                <h1> MAD Project </h1>
-        </header>
 
-        <section>
-
-        {% block body %} {% endblock %}
-
-        </section>
+	<header>
+		<h1>MAD projekt</h1>
+	</header>
+	<nav>
+		<ul>
+			<li><a href="/">Analýza</a></li>
+			<li><a href="/classificator">Klasifikátor</a></li>
+		</ul>
+		</div>
+	</nav>
+	</div>
+	<section id="hlavny">
+	
+	{% block body %} {% endblock %}
+	
+	</section>
 
 </body>
+
 </html>
