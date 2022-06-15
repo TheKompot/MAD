@@ -1,0 +1,42 @@
+Meno : Rudolf Nosek
+Odbor: 2DAV
+
+zoznam suborov: 
+nyc_squirrel.csv
+input.csv (vytvoreny)
+map.png
+
+Import dat
+data = pd.read_csv('nyc_squirrel.csv')
+
+Zmena datumu z formatu string na datime
+df['date'] = pd.to_datetime(data['date'],format="%m%d%Y")
+
+Zmena typu zo stringu na cislo 
+df['above_ground_sighter_measurement'] = df['above_ground_sighter_measurement'].replace("FALSE",np.nan).astype('float')
+
+Tvorba novych stplcov 
+df['did_activity'] = np.any(data[['running','chasing','climbing','eating','foraging']],axis=1)
+
+Tvorba plotov bolo prevazne cez prikaz plt.plot alebo plt.scatter s pouzitim for cyklou a inych prikazov pre specialne potreby
+Ine prikazy na plotovanie ktore boli pozuite:
+sns.heatmap(corr_df.corr(),annot=True)
+im = ax.imshow(im, extent=[-73.983664, -73.950284, 40.763819, 40.801649])
+ax[i,j].boxplot(df[l[i*2+j]].dropna())
+
+Zistenie poctou v case
+df.groupby('date')['long'].count()
+
+Zistenie linearneho trendu
+X = np.array(range(len(y))).reshape(-1,1)
+lr = LinearRegression().fit(X,y)
+y_pred = lr.predict(X)
+y_notrend = y-y_pred
+
+Spektralny rozklad a zmena na realne cisla
+power_spec_complex = np.fft.fft(y_autocorr)
+conj = np.conj(power_spec_complex)
+power_spec = np.real(power_spec_complex * conj)
+
+Zistenie priemerov v case
+ts = corr_df.groupby('date').mean()
